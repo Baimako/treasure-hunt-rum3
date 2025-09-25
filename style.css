@@ -1,0 +1,30 @@
+#hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #333;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+body {
+  background: #dbd8ae;
+  font-family: candara;
+}
+h1,
+h2 {
+  text-align: center;
+}
+.treasure {
+  cursor: pointer;
+  color: gold;
+  display: none;
+  transition: all 0.3s ease;
+}
+.found {
+  color: gray;
+  text-decoration: line-through;
+}
