@@ -14,9 +14,9 @@ body {
   background: #dbd8ae;
   font-family: candara;
 }
-h1,
-h2 {
+h1 {
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .treasure {
   cursor: pointer;
@@ -25,6 +25,19 @@ h2 {
   transition: all 0.3s ease;
 }
 .found {
-  color: gray;
+  color: red;
+  background: white;
   text-decoration: line-through;
+}
+.p {
+  text-align: justify;
+}
+.chapter1 {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  align-items: center;
+  width: 800px;
+  text-align: center;
+  justify-content: center;
 }
