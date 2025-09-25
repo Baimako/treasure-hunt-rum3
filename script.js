@@ -1,7 +1,12 @@
-// track any clicks to
 
 var clickCounter = 0
 var tressuresFound = 0
+var totalSeconds = 0;
+
+
+const timerDisplay =  document.getElementById("timer")
+const timerInterval = setInterval(updateTimer, 1000);
+
 document.addEventListener('click', function(event) {
     let idOfElement = event.target;
 
@@ -17,8 +22,25 @@ document.addEventListener('click', function(event) {
     }
     clickCounter += 1;
 
+    if (tressuresFound >= 10)
+    {
+        clearInterval(timerInterval);
+    }
     console.log("tressures found: " + tressuresFound);
+    console.log("total seconds: " + totalSeconds);
 });
 
+
+
+//
+function updateTimer() {
+    totalSeconds++;
+
+    let hours = Math.floor(totalSeconds / 3600);
+    let minutes = Math.floor((totalSeconds % 3600) / 60);
+    let seconds = totalSeconds % 60;
+
+    timerDisplay.textContent = `${hours}:${minutes}:${seconds}`;
+}
 
 
